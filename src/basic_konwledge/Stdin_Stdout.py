@@ -38,3 +38,17 @@ sys.stdout = open('test.txt','w')
 print('hello world')
 sys.stdout = temp #恢复默认映射关系
 print('nice')
+
+
+#输出不换行
+print('123', end="")
+
+#格式化输出
+temp=3.14159
+print('圆周率的近似值是',round(temp,2))
+print('圆周率的近似值是%.2f' % temp)
+#使用tuple传递
+#%s:string  %10:右对齐，取10位，不够则补位，（-10）就是左对齐，%.4后面的字符串取4位  %d十进制整数
+print("I'm %10.4s. I'm %d year old" % ('Vamei', 99))
+#使用字典传递
+print("I'm %(name)s. I'm %(age)d year old" % {'name':'Vamei', 'age':99})
